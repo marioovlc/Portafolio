@@ -32,17 +32,42 @@
   }
 
   &__profile-img-cont {
-    width: 18rem;
-    height: 18rem;
-    margin: 0 auto 3rem auto;
-    border: 2px solid $theme-text;
-    box-shadow: 6px 6px 0 0 $theme-text;
+    width: 22rem;
+    height: 22rem;
+    margin: 0 auto 4rem auto;
+    position: relative;
+    z-index: 10;
+
+    // Cyberpunk tech border
+    border: 4px solid $theme-text;
+    box-shadow:
+      0 0 0 4px $theme-bg, // Gap
+      0 0 0 8px $theme-primary, // Outer Border
+      0 0 20px rgba($theme-primary, 0.6), // Glow
+      12px 12px 0 0 rgba($theme-text, 0.5); // Hard shadow
+
     background: $theme-primary;
+    border-radius: 20px;
     overflow: hidden;
 
+    animation: floatProfile 6s ease-in-out infinite;
+
     @include respond(phone) {
-      width: 15rem;
-      height: 15rem;
+      width: 18rem;
+      height: 18rem;
+      border-width: 3px;
+    }
+
+    // decorative corners
+    &::after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 10px;
+      height: 10px;
+      background: $theme-white;
+      box-shadow: -15px 0 0 $theme-white; // secondary dot
     }
   }
 
@@ -51,8 +76,26 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    // Optional: pixelate effect if the image is high res
-    image-rendering: pixelated;
+    image-rendering: pixelated; // Optimized for pixel art
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes floatProfile {
+    0% {
+      transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+      transform: translateY(-10px) rotate(1deg);
+    }
+
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
   }
 
   &__info {
