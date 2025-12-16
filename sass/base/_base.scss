@@ -1,0 +1,84 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+  scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 59%; //1 rem =
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 56%; //1 rem =
+  }
+
+  @include respond(big-desktop) {
+    font-size: 65%; //1rem =
+  }
+}
+
+body {
+  box-sizing: border-box;
+  position: relative;
+  line-height: 1.6;
+  font-family: $default-font;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: $theme-bg;
+  color: $theme-text;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $theme-bg-alt;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $theme-primary;
+    border-radius: 10px;
+
+    &:hover {
+      background: darken($theme-primary, 10%);
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: $transition-base;
+}
+
+li {
+  list-style: none;
+}
+
+input:focus,
+button:focus,
+a:focus,
+textarea:focus {
+  outline: 2px solid $theme-primary;
+  outline-offset: 3px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+}

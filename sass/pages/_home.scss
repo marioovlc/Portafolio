@@ -1,0 +1,517 @@
+// -- HERO SECTION --
+.home-hero {
+  color: $theme-white;
+  // Retro grid background or solid solid color
+  // Toned down dot pattern
+  background-image: radial-gradient($theme-text-muted 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-color: $theme-bg;
+
+  height: 100vh;
+  min-height: 80rem;
+  max-height: 120rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include respond(phone) {
+    height: unset;
+    min-height: 100vh;
+    padding: 15rem 0 10rem 0;
+  }
+
+  &__content {
+    max-width: 90rem;
+    width: 92%;
+    text-align: center;
+    border: 2px solid $theme-text;
+    padding: 4rem;
+    background: $theme-bg;
+    box-shadow: 8px 8px 0 0 $theme-text;
+  }
+
+  &__info {
+    margin: 2rem auto 4rem auto;
+    max-width: 60rem;
+
+    .text-primary {
+      font-size: 1.8rem;
+      color: $theme-text-muted;
+      line-height: 1.6;
+      font-weight: 500;
+      font-family: $default-font;
+
+      @include respond(phone) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__cta {
+    margin-top: 4rem;
+  }
+
+  &__mouse-scroll-cont {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .mouse {
+      // Pixel mouse
+      width: 30px;
+      height: 50px;
+      border: 2px solid $theme-text;
+      border-radius: 0;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $theme-text;
+        border-radius: 0;
+        opacity: 1;
+        animation: wheel 1.3s infinite;
+        -webkit-animation: wheel 1.3s infinite;
+      }
+    }
+
+    @keyframes wheel {
+      to {
+        opacity: 0;
+        top: 27px;
+      }
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+}
+
+// -- ABOUT SECTION --
+.about {
+  background: $theme-bg;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10rem;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+      grid-gap: 5rem;
+    }
+
+    &-title {
+      font-weight: 800;
+      font-size: 2.8rem;
+      margin-bottom: 3rem;
+      font-family: $heading-font;
+      color: $theme-primary;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 0 $theme-secondary;
+      background: none;
+      -webkit-text-fill-color: initial;
+    }
+
+    &-details-para {
+      font-size: 1.6rem;
+      color: $theme-text-muted;
+      max-width: 60rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      font-family: $default-font;
+
+      strong {
+        color: $theme-white;
+        font-weight: 700;
+        background: rgba($theme-primary, 0.2);
+        padding: 0 4px;
+      }
+
+      &:last-child {
+        margin-bottom: 4rem;
+      }
+    }
+
+    &-skills {
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__skill {
+          padding: 1rem 1.5rem;
+          margin-bottom: 1.5rem;
+          margin-right: 1.5rem;
+          font-size: 1.4rem;
+          background: $theme-bg;
+          color: $theme-text;
+          border-radius: 0;
+          font-weight: 700;
+          transition: all 0.3s;
+          cursor: default;
+          border: 2px solid $theme-text-muted;
+          font-family: $default-font;
+          box-shadow: 2px 2px 0 0 $theme-text-muted;
+
+          &:hover {
+            background: $theme-primary;
+            color: $theme-bg;
+            border-color: $theme-primary;
+            box-shadow: 2px 2px 0 0 $theme-bg-alt;
+            transform: translate(-2px, -2px);
+          }
+        }
+      }
+    }
+  }
+}
+
+// -- PROJECTS SECTION --
+.projects {
+  background: $theme-bg-alt;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-gap: 6rem;
+    margin-bottom: 10rem;
+    align-items: center;
+    border: 2px solid $theme-text;
+    padding: 3rem;
+    background: $theme-bg;
+    box-shadow: 8px 8px 0 0 $theme-text; // Hard shadow card
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+      grid-gap: 3rem;
+      margin-bottom: 8rem;
+      text-align: center;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-img-cont {
+      overflow: hidden;
+      border-radius: 0;
+      border: 2px solid $theme-text;
+      position: relative;
+      // Aspect ratio for the placeholders
+      aspect-ratio: 16/9;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.1s steps(5);
+        filter: grayscale(100%) contrast(1.2); // Retro feel
+
+        &:hover {
+          transform: scale(1.05);
+          filter: grayscale(0%) contrast(1);
+        }
+      }
+
+      // Gradients for placeholders
+      .projects__row-img-placeholder {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s;
+        border: 2px solid $theme-white;
+
+        // Retro solid colors
+        &.gradient-1 {
+          background: $theme-primary;
+        }
+
+        &.gradient-2 {
+          background: $theme-secondary;
+        }
+
+        &.gradient-3 {
+          background: #fff;
+        }
+
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+    }
+
+    &-content {
+      padding: 1rem 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start;
+
+      @include respond(tab-port) {
+        align-items: center;
+      }
+
+      &-title {
+        font-weight: 700;
+        font-size: 3.2rem;
+        margin-bottom: 1.5rem;
+        font-family: $heading-font;
+        color: $theme-white;
+        text-transform: uppercase;
+      }
+
+      &-desc {
+        font-size: 1.6rem;
+        color: $theme-text-muted;
+        max-width: 60rem;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+        font-family: $default-font;
+      }
+
+      &-tags {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+
+        @include respond(tab-port) {
+          justify-content: center;
+        }
+
+        span {
+          font-size: 1.2rem;
+          color: $theme-bg;
+          background: $theme-primary;
+          padding: 0.5rem 1rem;
+          border-radius: 0;
+          font-weight: 700;
+          border: 1px solid $theme-text;
+          box-shadow: 2px 2px 0 0 $theme-text;
+        }
+      }
+    }
+  }
+}
+
+// -- CONTACT SECTION --
+.contact {
+  background: $theme-bg-alt;
+  position: relative;
+
+  // Decorative pixel grid
+  // Decorative pixel grid removed for cleaner look
+  &::before {
+    display: none;
+  }
+
+  &__form-container {
+    background: $theme-bg;
+    padding: 5rem;
+    margin-top: 4rem;
+    max-width: 80rem;
+    width: 95%;
+    border-radius: 0;
+    margin: 4rem auto 0 auto;
+    border: 2px solid $theme-text;
+    box-shadow: 8px 8px 0 0 $theme-text;
+    position: relative;
+    z-index: 10;
+
+    @include respond(phone) {
+      padding: 3rem;
+    }
+  }
+
+  &__form-field {
+    margin-bottom: 3rem;
+  }
+
+  &__form-label {
+    color: $theme-text;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: block;
+    text-transform: uppercase;
+    font-family: $heading-font;
+  }
+
+  &__form-input {
+    color: $theme-text;
+    padding: 1.5rem 2rem;
+    width: 100%;
+    border: 2px solid $theme-text-muted;
+    font-size: 1.6rem;
+    background: $theme-bg-alt;
+    border-radius: 0;
+    font-family: $default-font;
+    transition: all 0.3s;
+
+    &::placeholder {
+      color: rgba($theme-text-muted, 0.5);
+    }
+
+    &:focus {
+      background: $theme-bg;
+      border-color: $theme-primary;
+      box-shadow: 4px 4px 0 0 $theme-primary;
+      outline: none;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: $heading-font;
+  }
+}
+
+// -- UTILITIES --
+
+.text-gradient {
+  // No gradient text in pixel theme, use solid color with shadow
+  color: $theme-primary;
+  text-shadow: 3px 3px 0 $theme-secondary;
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
+.heading-primary {
+  font-size: 6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+  font-family: $heading-font;
+
+  @include respond(tab-port) {
+    font-size: 4rem;
+  }
+
+  @include respond(phone) {
+    font-size: 3.5rem;
+  }
+}
+
+.heading-sec {
+
+  &__main {
+    display: block;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    font-family: $heading-font;
+    font-weight: 800;
+    color: $theme-white;
+    text-shadow: 3px 3px 0 $theme-secondary;
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 10px;
+    text-decoration-color: $theme-primary;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__sub {
+    display: block;
+    text-align: center;
+    color: $theme-text-muted;
+    font-size: 1.8rem;
+    font-weight: 500;
+    max-width: 80rem;
+    margin: auto;
+    line-height: 1.6;
+    font-family: $default-font;
+
+    @include respond(phone) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__mb-med {
+    margin-bottom: 8rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__mb-bg {
+    margin-bottom: 10rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 7rem;
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.5rem 5rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  border-radius: 0; // Square buttons
+  transition: all 0.2s; // Faster transition
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+  text-align: center;
+  border: 2px solid transparent;
+  font-family: $heading-font;
+
+  // Theme Button
+  &--theme {
+    background: $theme-primary;
+    color: $theme-bg;
+    box-shadow: 4px 4px 0 0 $theme-white; // Hard shadow
+    border: 2px solid $theme-bg; // Inset border look
+
+    &:hover {
+      background: lighten($theme-primary, 5%);
+      box-shadow: 2px 2px 0 0 $theme-white;
+      transform: translate(2px, 2px); // Press effect
+    }
+
+    &:active {
+      box-shadow: 0 0 0 0 $theme-white;
+      transform: translate(4px, 4px);
+    }
+  }
+
+  // Background Button
+  &--bg {
+    background: $theme-bg;
+    color: $theme-primary;
+    border: 2px solid $theme-primary;
+    box-shadow: 4px 4px 0 0 $theme-primary;
+
+    &:hover {
+      background: $theme-primary;
+      color: $theme-bg;
+      box-shadow: 2px 2px 0 0 $theme-white;
+      transform: translate(2px, 2px);
+    }
+  }
+
+  &--med {
+    padding: 1.2rem 4rem;
+  }
+}

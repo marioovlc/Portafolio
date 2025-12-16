@@ -1,0 +1,131 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background: $theme-bg; // Solid background
+  border-bottom: 2px solid $theme-text; // Hard border
+  box-shadow: none;
+  transition: $transition-base;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 5rem;
+
+    @include respond(tab-port) {
+      padding: 1.5rem 2rem;
+    }
+  }
+
+  &__logo-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: $theme-text;
+
+    &:hover {
+      color: $theme-primary;
+    }
+  }
+
+  &__logo-sub {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: $heading-font;
+    color: $theme-primary;
+    background: none; // Remove gradient
+    -webkit-text-fill-color: initial;
+    text-shadow: 2px 2px 0px #000;
+  }
+
+  &__links {
+    display: flex;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__link {
+    padding: 0 2rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    color: $theme-text;
+    font-weight: 700;
+    transition: color 0.3s;
+    font-family: $heading-font;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $theme-primary;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
+  }
+
+  &__main-ham-menu-cont {
+    display: none;
+    width: 3rem;
+    cursor: pointer;
+
+    @include respond(phone) {
+      display: block;
+    }
+  }
+
+  &__main-ham-menu {
+    width: 100%;
+    filter: invert(1);
+  }
+
+  &__main-ham-menu-close {
+    width: 100%;
+    filter: invert(1);
+  }
+
+  &__sm-menu {
+    background: $theme-bg;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    box-shadow: none;
+    border-top: 2px solid $theme-text;
+    border-bottom: 2px solid $theme-text;
+
+    &--active {
+      visibility: hidden;
+      opacity: 0;
+
+      @include respond(phone) {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__sm-menu-link {
+    a {
+      display: block;
+      padding: 2.5rem 3rem;
+      font-size: 1.6rem;
+      color: $theme-text;
+      text-align: center;
+      border-bottom: 2px solid $theme-text;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: $heading-font;
+      transition: all 0.3s;
+
+      &:hover {
+        background: $theme-primary;
+        color: #000;
+      }
+    }
+  }
+}

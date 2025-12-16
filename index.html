@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Mario Fernández - Portafolio</title>
+  <meta name="description" content="Portafolio de Desarrollo Web de Mario Fernández" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Use a generic placeholder favicon or existing one if valid -->
+  <link rel="icon" href="assets/jpeg/logo.jpg" type="image/x-icon">
+
+  <!-- Google Fonts: Silkscreen (Headings) & Space Mono (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="main-bg"></div>
+  <header class="header">
+    <div class="header__content">
+      <div class="header__logo-container">
+        <span class="header__logo-sub">Mario.dev</span>
+      </div>
+      <div class="header__main">
+        <ul class="header__links">
+          <li class="header__link-wrapper">
+            <a href="#home" class="header__link">Inicio</a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="#about" class="header__link">Sobre mí</a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="#projects" class="header__link">Proyectos</a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="#contact" class="header__link">Contacto</a>
+          </li>
+        </ul>
+        <div class="header__main-ham-menu-cont">
+          <img src="./assets/svg/ham-menu.svg" alt="hamburger menu" class="header__main-ham-menu" />
+          <img src="./assets/svg/ham-menu-close.svg" alt="hamburger menu close"
+            class="header__main-ham-menu-close d-none" />
+        </div>
+      </div>
+    </div>
+    <div class="header__sm-menu">
+      <div class="header__sm-menu-content">
+        <ul class="header__sm-menu-links">
+          <li class="header__sm-menu-link"><a href="#home">Inicio</a></li>
+          <li class="header__sm-menu-link"><a href="#about">Sobre mí</a></li>
+          <li class="header__sm-menu-link"><a href="#projects">Proyectos</a></li>
+          <li class="header__sm-menu-link"><a href="#contact">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section id="home" class="home-hero">
+    <div class="home-hero__content">
+      <h1 class="heading-primary">Hola, soy <span class="text-gradient">Mario Fernández</span></h1>
+      <div class="home-hero__info">
+        <p class="text-primary">
+          Desarrollador Full Stack en formación, apasionado por crear experiencias web modernas y escalables.
+          Transformando ideas en código.
+        </p>
+      </div>
+      <div class="home-hero__cta">
+        <a href="#projects" class="btn btn--bg">Ver Proyectos</a>
+      </div>
+    </div>
+
+    <div class="home-hero__mouse-scroll-cont">
+      <div class="mouse"></div>
+    </div>
+  </section>
+
+  <section id="about" class="about sec-pad">
+    <div class="main-container">
+      <h2 class="heading heading-sec heading-sec__mb-med">
+        <span class="heading-sec__main">Sobre mí</span>
+        <span class="heading-sec__sub">
+          Desarrollador con gran curiosidad y ganas de innovar.
+        </span>
+      </h2>
+      <div class="about__content">
+        <div class="about__content-main">
+          <h3 class="about__content-title">¿Quién soy?</h3>
+          <div class="about__content-details">
+            <p class="about__content-details-para">
+              Soy <strong>Mario Fernández</strong>, un desarrollador ubicado en Valencia. Me especializo en el
+              ecosistema de JavaScript y tecnologías web modernas. Mi objetivo es construir aplicaciones eficientes y
+              atractivas que resuelvan problemas reales.
+            </p>
+            <p class="about__content-details-para">
+              Combinando mi formación en SMR y DAM, tengo una visión completa del desarrollo, desde la infraestructura
+              hasta la interfaz de usuario.
+            </p>
+          </div>
+          <a href="#contact" class="btn btn--med btn--theme">Contactar</a>
+        </div>
+        <div class="about__content-skills">
+          <h3 class="about__content-title">Tech Stack</h3>
+          <div class="skills">
+            <div class="skills__skill">HTML5</div>
+            <div class="skills__skill">CSS3</div>
+            <div class="skills__skill">JavaScript</div>
+            <div class="skills__skill">TypeScript</div>
+            <div class="skills__skill">React</div>
+            <div class="skills__skill">Node.js</div>
+            <div class="skills__skill">Firebase</div>
+            <div class="skills__skill">Java</div>
+            <div class="skills__skill">Git</div>
+            <div class="skills__skill">SASS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects sec-pad">
+    <div class="main-container">
+      <h2 class="heading heading-sec heading-sec__mb-bg">
+        <span class="heading-sec__main">Proyectos Destacados</span>
+        <span class="heading-sec__sub">
+          Una selección de mis trabajos más recientes.
+        </span>
+      </h2>
+
+      <div class="projects__content">
+        <!-- Proyecto 1: Calendario Adviento -->
+        <div class="projects__row">
+          <div class="projects__row-img-cont">
+            <img src="assets/png/advent_calendar.png" alt="Calendario de Adviento ZC" />
+          </div>
+          <div class="projects__row-content">
+            <h3 class="projects__row-content-title">CalendarioAdvientoZC</h3>
+            <p class="projects__row-content-desc">
+              Calendario de adviento interactivo para desarrolladores. Cada día desbloquea un nuevo reto o recurso de
+              programación.
+            </p>
+            <div class="projects__row-tags">
+              <span>JavaScript</span>
+              <span>CSS Animations</span>
+              <span>Gamification</span>
+            </div>
+            <a href="https://github.com/marioovlc/CalendarioAdvientoZC" class="btn btn--med btn--theme"
+              target="_blank">Ver Código</a>
+          </div>
+        </div>
+
+        <!-- Proyecto 2: Stratify -->
+        <div class="projects__row">
+          <div class="projects__row-img-cont">
+            <img src="assets/png/stratify_esports.png" alt="Stratify App" />
+          </div>
+          <div class="projects__row-content">
+            <h3 class="projects__row-content-title">Stratify</h3>
+            <p class="projects__row-content-desc">
+              Gestor de torneos de E-sports. Permite organizar brackets, gestionar equipos y visualizar resultados
+              (Proyecto en desarrollo).
+            </p>
+            <div class="projects__row-tags">
+              <span>React</span>
+              <span>Redux Toolkit</span>
+              <span>E-sports</span>
+            </div>
+            <a href="https://github.com/marioovlc/Stratify" class="btn btn--med btn--theme" target="_blank">Ver
+              Código</a>
+          </div>
+        </div>
+
+        <!-- Proyecto 3: RegisterElementReact-UI -->
+        <div class="projects__row">
+          <div class="projects__row-img-cont">
+            <img src="assets/png/react_ui.png" alt="Register UI Component" />
+          </div>
+          <div class="projects__row-content">
+            <h3 class="projects__row-content-title">RegisterElementReact-UI</h3>
+            <p class="projects__row-content-desc">
+              Componente de interfaz de usuario para formularios de registro. Prueba técnica enfocada en validación,
+              accesibilidad y diseño limpio.
+            </p>
+            <div class="projects__row-tags">
+              <span>React</span>
+              <span>UI Library</span>
+              <span>Forms</span>
+            </div>
+            <a href="https://github.com/marioovlc/RegisterElementReact-UI" class="btn btn--med btn--theme"
+              target="_blank">Ver Código</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact sec-pad">
+    <div class="main-container">
+      <h2 class="heading heading-sec heading-sec__mb-med">
+        <span class="heading-sec__main">Contacto</span>
+        <span class="heading-sec__sub">
+          ¿Tienes una idea en mente? Hablemos.
+        </span>
+      </h2>
+      <div class="contact__form-container">
+        <div class="form-success-msg d-none">
+          <p>¡Correo enviado! 🚀</p>
+        </div>
+        <form id="contactForm" action="https://formsubmit.co/mariotorrent2005@gmail.com" method="POST"
+          class="contact__form">
+          <input type="hidden" name="_subject" value="Nuevo mensaje de tu Portafolio!">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="contact__form-field">
+            <label class="contact__form-label" for="name">Nombre</label>
+            <input required placeholder="Tu Nombre" type="text" class="contact__form-input" name="name" id="name" />
+          </div>
+          <div class="contact__form-field">
+            <label class="contact__form-label" for="email">Email</label>
+            <input required placeholder="tucorreo@ejemplo.com" type="email" class="contact__form-input" name="email"
+              id="email" />
+          </div>
+          <div class="contact__form-field">
+            <label class="contact__form-label" for="message">Mensaje</label>
+            <textarea required cols="30" rows="10" class="contact__form-input"
+              placeholder="Cuéntame sobre tu proyecto..." name="message" id="message"></textarea>
+          </div>
+          <button type="submit" class="btn btn--theme contact__btn">Enviar Mensaje</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="main-container">
+      <div class="main-footer__upper">
+        <div class="main-footer__row main-footer__row-1">
+          <h2 class="heading heading-sm main-footer__heading-sm">
+            <span>Socials</span>
+          </h2>
+          <div class="main-footer__social-cont">
+            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/mario-fernández-9417502a1"><img
+                class="main-footer__icon" src="./assets/png/linkedin-ico.png" alt="LinkedIn" /></a>
+            <a target="_blank" rel="noreferrer" href="https://github.com/marioovlc"><img class="main-footer__icon"
+                src="./assets/png/github-ico.png" alt="GitHub" /></a>
+            <a target="_blank" rel="noreferrer" href="https://twitter.com/marioovlc"><img class="main-footer__icon"
+                src="./assets/png/twitter-ico.png" alt="Twitter" /></a>
+          </div>
+        </div>
+        <div class="main-footer__row main-footer__row-2">
+          <h4 class="heading heading-sm text-lt">Mario Fernández</h4>
+          <p class="main-footer__short-desc">Desarrollador Web Full Stack</p>
+        </div>
+      </div>
+      <div class="main-footer__lower">
+        &copy; 2025. Made by <a rel="noreferrer" target="_blank" href="https://github.com/marioovlc">Mario Fernández</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>

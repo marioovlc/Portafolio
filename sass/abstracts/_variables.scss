@@ -1,0 +1,22 @@
+// Colors
+$theme-bg: #1a1a1a;
+$theme-bg-alt: #252525;
+$theme-primary: #2979ff; // Vibrant Pixel Blue
+$theme-secondary: #00d4ff; // Cyan accent
+$theme-white: #ffffff;
+$theme-text: #eaeaea;
+$theme-text-muted: #aaaaaa;
+
+// Fonts
+$default-font: 'Space Mono', monospace; // "Professional" code look
+$heading-font: 'Silkscreen', cursive; // Pixel look
+
+// Shadows & Radii
+$shadow-sm: 2px 2px 0 0 rgba(0, 0, 0, 1);
+$shadow-md: 4px 4px 0 0 rgba(0, 0, 0, 1);
+$shadow-glow: none; // No glow in hard pixel style, usually. Or maybe a hard outline.
+
+$commonBorderRadius: 0px; // Sharp edges
+
+// Transitions
+$transition-base: all 0.3s ease;

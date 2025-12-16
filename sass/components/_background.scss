@@ -1,0 +1,37 @@
+.main-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    background-color: $theme-bg;
+    overflow: hidden;
+    perspective: 1000px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        top: -50%;
+        left: -50%;
+        background-image:
+            linear-gradient(transparent 95%, rgba($theme-primary, 0.3) 95%),
+            linear-gradient(90deg, transparent 95%, rgba($theme-primary, 0.3) 95%);
+        background-size: 50px 50px;
+        transform: rotateX(45deg);
+        animation: planeMove 5s linear infinite;
+        opacity: 0.4;
+    }
+}
+
+@keyframes planeMove {
+    0% {
+        transform: translateY(0) rotateX(45deg);
+    }
+
+    100% {
+        transform: translateY(50px) rotateX(45deg);
+    }
+}
