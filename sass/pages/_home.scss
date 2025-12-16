@@ -31,6 +31,30 @@
     box-shadow: 8px 8px 0 0 $theme-text;
   }
 
+  &__profile-img-cont {
+    width: 18rem;
+    height: 18rem;
+    margin: 0 auto 3rem auto;
+    border: 2px solid $theme-text;
+    box-shadow: 6px 6px 0 0 $theme-text;
+    background: $theme-primary;
+    overflow: hidden;
+
+    @include respond(phone) {
+      width: 15rem;
+      height: 15rem;
+    }
+  }
+
+  &__profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    // Optional: pixelate effect if the image is high res
+    image-rendering: pixelated;
+  }
+
   &__info {
     margin: 2rem auto 4rem auto;
     max-width: 60rem;
