@@ -202,7 +202,7 @@ textarea {
   width: 92%;
   text-align: center;
   border: 2px solid #eaeaea;
-  padding: 4rem;
+  padding: 6rem;
   background: #1a1a1a;
   box-shadow: 8px 8px 0 0 #eaeaea;
 }
@@ -395,7 +395,7 @@ textarea {
   margin-bottom: 10rem;
   align-items: center;
   border: 2px solid #eaeaea;
-  padding: 3rem;
+  padding: 5rem;
   background: #1a1a1a;
   box-shadow: 8px 8px 0 0 #eaeaea;
 }
@@ -506,7 +506,7 @@ textarea {
 }
 .contact__form-container {
   background: #1a1a1a;
-  padding: 5rem;
+  padding: 6rem;
   margin-top: 4rem;
   max-width: 80rem;
   width: 95%;

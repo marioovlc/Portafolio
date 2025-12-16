@@ -26,7 +26,7 @@
     width: 92%;
     text-align: center;
     border: 2px solid $theme-text;
-    padding: 4rem;
+    padding: 6rem;
     background: $theme-bg;
     box-shadow: 8px 8px 0 0 $theme-text;
   }
@@ -252,7 +252,7 @@
     margin-bottom: 10rem;
     align-items: center;
     border: 2px solid $theme-text;
-    padding: 3rem;
+    padding: 5rem;
     background: $theme-bg;
     box-shadow: 8px 8px 0 0 $theme-text; // Hard shadow card
 
@@ -382,7 +382,7 @@
 
   &__form-container {
     background: $theme-bg;
-    padding: 5rem;
+    padding: 6rem;
     margin-top: 4rem;
     max-width: 80rem;
     width: 95%;
