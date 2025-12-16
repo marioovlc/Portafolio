@@ -36,55 +36,52 @@
   }
 
   &__short-desc {
-    &__short-desc {
-      margin-top: 1.5rem;
-      color: $theme-text-muted;
-      font-size: 1.6rem;
-      line-height: 1.7;
-      font-family: $default-font;
+    margin-top: 1.5rem;
+    color: $theme-text-muted;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    font-family: $default-font;
+  }
+
+  &__social-cont {
+    margin-top: 2rem;
+  }
+
+  &__icon {
+    margin-right: 1.5rem;
+    width: 2.5rem;
+    filter: invert(1); // Make black icons white
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translate(2px, 2px);
     }
 
-    &__social-cont {
-      margin-top: 2rem;
+    &--mr-none {
+      margin-right: 0;
     }
+  }
 
-    &__icon {
-      &__icon {
-        margin-right: 1.5rem;
-        width: 2.5rem;
-        filter: invert(1); // Make black icons white
-        transition: transform 0.2s;
+  &__lower {
+    padding: 3rem 0;
+    border-top: 2px solid $theme-text;
+    color: $theme-text-muted;
+    font-size: 1.4rem;
+    text-align: center;
+    font-family: $heading-font;
 
-        &:hover {
-          transform: translate(2px, 2px);
-        }
+    a {
+      text-decoration: none;
+      font-weight: 700;
+      margin-left: 5px;
+      color: $theme-primary;
+      transition: color 0.3s;
 
-        &--mr-none {
-          margin-right: 0;
-        }
+      &:hover {
+        color: $theme-white;
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
       }
-
-      &__lower {
-        &__lower {
-          padding: 3rem 0;
-          border-top: 2px solid $theme-text;
-          color: $theme-text-muted;
-          font-size: 1.4rem;
-          text-align: center;
-          font-family: $heading-font;
-
-          a {
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 5px;
-            color: $theme-primary;
-            transition: color 0.3s;
-
-            &:hover {
-              color: $theme-white;
-              text-decoration: underline;
-              text-decoration-thickness: 2px;
-            }
-          }
-        }
-      }
+    }
+  }
+}
