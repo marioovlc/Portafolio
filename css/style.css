@@ -279,7 +279,7 @@ textarea {
 }
 .home-hero__mouse-scroll-cont {
   position: absolute;
-  bottom: 3rem;
+  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
 }
