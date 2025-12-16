@@ -1,10 +1,10 @@
-/* Error: expected "{".
+/* Error: expected "}".
  *    ,
- * 34 |   line-height: 1.6;
- *    |                   ^
+ * 90 |       }
+ *    |        ^
  *    '
- *   sass\base\_base.scss 34:19  @import
- *   sass\main.scss 5:9          root stylesheet */
+ *   sass\components\_footer.scss 90:8  @import
+ *   sass\main.scss 13:9                root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a    \2577 \a 34 \2502    line-height: 1.6;\d\a    \2502                    ^\a    \2575 \a   sass\\base\\_base.scss 34:19  @import\a   sass\\main.scss 5:9          root stylesheet';
+  content: 'Error: expected "}".\a    \2577 \a 90 \2502        }\a    \2502         ^\a    \2575 \a   sass\\components\\_footer.scss 90:8  @import\a   sass\\main.scss 13:9                root stylesheet';
 }

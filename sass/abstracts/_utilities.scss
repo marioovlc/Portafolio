@@ -3,16 +3,12 @@
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
-<<<<<<< HEAD
 
-=======
->>>>>>> 83d305b2e572f3c709856668b8e2e8774eb96c8e
   @include respond(phone) {
     font-size: 4.5rem;
   }
 }
 
-<<<<<<< HEAD
 // .heading-sec {
 //   &__mb-bg {
 //     margin-bottom: 11rem;
@@ -48,75 +44,6 @@
 //     }
 //   }
 // }
-=======
-.heading-sec {
-  &__mb-bg {
-    margin-bottom: 11rem;
-    @include respond(tab-port) {
-      margin-bottom: 8rem;
-    }
-  }
-
-  &__mb-med {
-    margin-bottom: 9rem;
-    @include respond(tab-port) {
-      margin-bottom: 8rem;
-    }
-  }
-
-  &__main {
-    display: block;
-    font-size: 4rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    letter-spacing: 3px;
-    text-align: center;
-    margin-bottom: 3.5rem;
-    position: relative;
-    &--lt {
-      color: #fff;
-      &::after {
-        content: '';
-        background: #fff !important;
-      }
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      top: calc(100% + 1.5rem);
-      height: 5px;
-      width: 3rem;
-      background: $themeClrPrimary;
-      left: 50%;
-      transform: translateX(-50%);
-      border-radius: $commonBorderRadius;
-
-      @include respond(phone) {
-        top: calc(100% + 1.2rem);
-      }
-    }
-  }
-
-  &__sub {
-    display: block;
-    text-align: center;
-    color: #777;
-    font-size: 2rem;
-    font-weight: 500;
-    max-width: 80rem;
-    margin: auto;
-    line-height: 1.6;
-
-    @include respond(phone) {
-      font-size: 1.8rem;
-    }
-
-    &--lt {
-      color: #eee;
-    }
-  }
-}
->>>>>>> 83d305b2e572f3c709856668b8e2e8774eb96c8e
 
 .heading-sm {
   font-size: 2.2rem;
@@ -149,17 +76,13 @@
     padding: 1.5rem 8rem;
     font-size: 2rem;
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> 83d305b2e572f3c709856668b8e2e8774eb96c8e
   &--med {
     padding: 1.5rem 5rem;
     font-size: 1.6rem;
   }
 
   &--theme {
-<<<<<<< HEAD
     background: $theme-primary;
     color: #fff;
   }
@@ -168,15 +91,6 @@
     color: $theme-primary;
     background: #fff;
     border: 2px solid $theme-primary;
-=======
-    background: $themeClrPrimary;
-    color: #fff;
-  }
-  &--theme-inv {
-    color: $themeClrPrimary;
-    background: #fff;
-    border: 2px solid $themeClrPrimary;
->>>>>>> 83d305b2e572f3c709856668b8e2e8774eb96c8e
     box-shadow: none;
     padding: calc(1.5rem - 2px) calc(5rem - 2px);
   }
@@ -184,10 +98,7 @@
 
 .sec-pad {
   padding: 12rem 0;
-<<<<<<< HEAD
 
-=======
->>>>>>> 83d305b2e572f3c709856668b8e2e8774eb96c8e
   @include respond(tab-port) {
     padding: 8rem 0;
   }
