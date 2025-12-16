@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 // --- Mobile Menu Navigation ---
 const hamMenuBtn = document.querySelector('.header__main-ham-menu-cont')
 const smallMenu = document.querySelector('.header__sm-menu')
 const headerHamMenuBtn = document.querySelector('.header__main-ham-menu')
 const headerHamMenuCloseBtn = document.querySelector('.header__main-ham-menu-close')
+=======
+// ---
+const hamMenuBtn = document.querySelector('.header__main-ham-menu-cont')
+const smallMenu = document.querySelector('.header__sm-menu')
+const headerHamMenuBtn = document.querySelector('.header__main-ham-menu')
+const headerHamMenuCloseBtn = document.querySelector(
+  '.header__main-ham-menu-close'
+)
+>>>>>>> 83d305b2e572f3c709856668b8e2e8774eb96c8e
 const headerSmallMenuLinks = document.querySelectorAll('.header__sm-menu-link')
 
 hamMenuBtn.addEventListener('click', () => {
@@ -28,6 +38,7 @@ for (let i = 0; i < headerSmallMenuLinks.length; i++) {
   })
 }
 
+<<<<<<< HEAD
 // --- Logo Click ---
 const headerLogoContainer = document.querySelector('.header__logo-container')
 
@@ -70,3 +81,11 @@ if (contactForm) {
       })
   })
 }
+=======
+// ---
+const headerLogoConatiner = document.querySelector('.header__logo-container')
+
+headerLogoConatiner.addEventListener('click', () => {
+  location.href = 'index.html'
+})
+>>>>>>> 83d305b2e572f3c709856668b8e2e8774eb96c8e

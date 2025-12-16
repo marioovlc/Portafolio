@@ -30,6 +30,7 @@ html {
 body {
   box-sizing: border-box;
   position: relative;
+<<<<<<< HEAD
   line-height: 1.6;
   font-family: $default-font;
   overflow-x: hidden;
@@ -53,12 +54,23 @@ body {
       background: darken($theme-primary, 10%);
     }
   }
+=======
+  line-height: 1.5;
+  font-family: sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: 'Source Sans Pro', sans-serif;
+  
+>>>>>>> 83d305b2e572f3c709856668b8e2e8774eb96c8e
 }
 
 a {
   text-decoration: none;
   color: inherit;
+<<<<<<< HEAD
   transition: $transition-base;
+=======
+>>>>>>> 83d305b2e572f3c709856668b8e2e8774eb96c8e
 }
 
 li {
@@ -69,16 +81,28 @@ input:focus,
 button:focus,
 a:focus,
 textarea:focus {
+<<<<<<< HEAD
   outline: 2px solid $theme-primary;
   outline-offset: 3px;
+=======
+  outline: none;
+>>>>>>> 83d305b2e572f3c709856668b8e2e8774eb96c8e
 }
 
 button {
   border: none;
   cursor: pointer;
+<<<<<<< HEAD
   font-family: inherit;
 }
 
 textarea {
   resize: vertical;
 }
+=======
+}
+
+textarea {
+  resize: none;
+}
+>>>>>>> 83d305b2e572f3c709856668b8e2e8774eb96c8e
