@@ -8,7 +8,7 @@
   background-color: $theme-bg;
 
   height: 100vh;
-  min-height: 80rem;
+  min-height: 70rem; // Reduced from 80rem
   max-height: 120rem;
   position: relative;
   display: flex;
@@ -26,15 +26,17 @@
     width: 92%;
     text-align: center;
     border: 2px solid $theme-text;
-    padding: 3rem;
+    padding: 4rem; // Balanced padding
     background: $theme-bg;
     box-shadow: 8px 8px 0 0 $theme-text;
+    position: relative;
+    z-index: 5;
   }
 
   &__profile-img-cont {
-    width: 22rem;
-    height: 22rem;
-    margin: 0 auto 4rem auto;
+    width: 18rem; // Reduced from 22rem
+    height: 18rem; // Reduced from 22rem
+    margin: 0 auto 3rem auto; // Reduced margin from 4rem
     position: relative;
     z-index: 10;
 
@@ -53,8 +55,8 @@
     animation: floatProfile 6s ease-in-out infinite;
 
     @include respond(phone) {
-      width: 18rem;
-      height: 18rem;
+      width: 16rem;
+      height: 16rem;
       border-width: 3px;
     }
 
@@ -99,11 +101,11 @@
   }
 
   &__info {
-    margin: 2rem auto 4rem auto;
+    margin: 2rem auto 3rem auto; // Reduced bottom margin
     max-width: 60rem;
 
     .text-primary {
-      font-size: 1.8rem;
+      font-size: 1.6rem; // Slightly smaller text
       color: $theme-text-muted;
       line-height: 1.6;
       font-weight: 500;
@@ -116,12 +118,12 @@
   }
 
   &__cta {
-    margin-top: 4rem;
+    margin-top: 3rem; // Reduced top margin from 4rem
   }
 
   &__mouse-scroll-cont {
     position: absolute;
-    bottom: 1rem;
+    bottom: 2rem; // Moved up slightly to be visible but distinct
     left: 50%;
     transform: translateX(-50%);
 
@@ -458,18 +460,18 @@
 }
 
 .heading-primary {
-  font-size: 6rem;
+  font-size: 5rem; // Reduced from 6rem
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 800;
   font-family: $heading-font;
 
   @include respond(tab-port) {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   @include respond(phone) {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 
