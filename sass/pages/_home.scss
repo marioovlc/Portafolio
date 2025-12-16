@@ -8,7 +8,7 @@
   background-color: $theme-bg;
 
   height: 100vh;
-  min-height: 60rem; // Reduced to 60rem to prevent scrolling on small laptops
+  min-height: 65rem; // Increased from 60rem (Middle ground)
   max-height: 120rem;
   position: relative;
   display: flex;
@@ -22,11 +22,11 @@
   }
 
   &__content {
-    max-width: 50rem; // Much narrower for a true "card" look
+    max-width: 60rem; // Increased from 50rem (Middle ground)
     width: 90%;
     text-align: center;
     border: 2px solid $theme-text;
-    padding: 3rem;
+    padding: 4rem; // Increased from 3rem
     background: $theme-bg;
     box-shadow: 8px 8px 0 0 $theme-text;
     position: relative;
@@ -34,9 +34,9 @@
   }
 
   &__profile-img-cont {
-    width: 15rem; // Compact image
-    height: 15rem;
-    margin: 0 auto 2rem auto; // Tighter margin
+    width: 18rem; // Increased from 15rem
+    height: 18rem;
+    margin: 0 auto 3rem auto; // Increased margin
     position: relative;
     z-index: 10;
 
@@ -55,8 +55,8 @@
     animation: floatProfile 6s ease-in-out infinite;
 
     @include respond(phone) {
-      width: 14rem;
-      height: 14rem;
+      width: 16rem;
+      height: 16rem;
       border-width: 3px;
     }
 
@@ -101,44 +101,44 @@
   }
 
   &__info {
-    margin: 1.5rem auto 2.5rem auto; // Tighter spacing
-    max-width: 45rem;
+    margin: 2rem auto 3rem auto; // Relaxed spacing
+    max-width: 50rem;
 
     .text-primary {
-      font-size: 1.5rem; // Smaller but readable
+      font-size: 1.6rem; // Restored readability
       color: $theme-text-muted;
-      line-height: 1.5;
+      line-height: 1.6;
       font-weight: 500;
       font-family: $default-font;
 
       @include respond(phone) {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
       }
     }
   }
 
   &__cta {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
   &__mouse-scroll-cont {
     position: absolute;
-    bottom: 3vh; // Use vh for better responsiveness
+    bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
 
     .mouse {
       // Pixel mouse
-      width: 26px; // Slightly smaller
-      height: 42px;
+      width: 28px; // Middle ground size
+      height: 46px;
       border: 2px solid $theme-text;
       border-radius: 0;
       position: relative;
 
       &::before {
         content: '';
-        width: 4px;
-        height: 4px;
+        width: 6px;
+        height: 6px;
         position: absolute;
         top: 8px;
         left: 50%;
@@ -154,7 +154,7 @@
     @keyframes wheel {
       to {
         opacity: 0;
-        top: 22px;
+        top: 25px;
       }
     }
 
@@ -460,7 +460,7 @@
 }
 
 .heading-primary {
-  font-size: 4rem; // Reduced from 5rem
+  font-size: 4.5rem; // Increased from 4rem (Middle ground)
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 800;
@@ -468,11 +468,11 @@
   line-height: 1.2;
 
   @include respond(tab-port) {
-    font-size: 3.2rem;
+    font-size: 3.5rem;
   }
 
   @include respond(phone) {
-    font-size: 2.8rem;
+    font-size: 3rem;
   }
 }
 
