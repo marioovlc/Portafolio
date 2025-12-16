@@ -1,18 +1,8 @@
-<<<<<<< HEAD
 // --- Mobile Menu Navigation ---
 const hamMenuBtn = document.querySelector('.header__main-ham-menu-cont')
 const smallMenu = document.querySelector('.header__sm-menu')
 const headerHamMenuBtn = document.querySelector('.header__main-ham-menu')
 const headerHamMenuCloseBtn = document.querySelector('.header__main-ham-menu-close')
-=======
-// ---
-const hamMenuBtn = document.querySelector('.header__main-ham-menu-cont')
-const smallMenu = document.querySelector('.header__sm-menu')
-const headerHamMenuBtn = document.querySelector('.header__main-ham-menu')
-const headerHamMenuCloseBtn = document.querySelector(
-  '.header__main-ham-menu-close'
-)
->>>>>>> 83d305b2e572f3c709856668b8e2e8774eb96c8e
 const headerSmallMenuLinks = document.querySelectorAll('.header__sm-menu-link')
 
 hamMenuBtn.addEventListener('click', () => {
@@ -38,19 +28,14 @@ for (let i = 0; i < headerSmallMenuLinks.length; i++) {
   })
 }
 
-<<<<<<< HEAD
 // --- Logo Click ---
 const headerLogoContainer = document.querySelector('.header__logo-container')
 
-headerLogoContainer.addEventListener('click', () => {
-  location.href = '#home'
-})
-
-// --- Scroll Animations (Intersection Observer) ---
-// Optional: Add 'fade-in-up' class to elements you want to animate in HTML
-// For now, let's just make sure the nav bar background transitions smoothly if we wanted to add a scroll effect
-// But since we use sticky/fixed header, it's fine.
-
+if (headerLogoContainer) {
+  headerLogoContainer.addEventListener('click', () => {
+    location.href = '#home'
+  })
+}
 
 // --- Contact Form AJAX Submission ---
 const contactForm = document.getElementById('contactForm')
@@ -63,7 +48,10 @@ if (contactForm) {
 
     // Disable button to prevent multiple submissions
     const btn = contactForm.querySelector('button')
-    if (btn) btn.disabled = true;
+    if (btn) {
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+    }
 
     fetch('https://formsubmit.co/ajax/mariotorrent2005@gmail.com', {
       method: 'POST',
@@ -77,15 +65,10 @@ if (contactForm) {
       .catch(error => {
         console.log(error)
         alert('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.')
-        if (btn) btn.disabled = false;
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = 'Enviar Mensaje';
+        }
       })
   })
 }
-=======
-// ---
-const headerLogoConatiner = document.querySelector('.header__logo-container')
-
-headerLogoConatiner.addEventListener('click', () => {
-  location.href = 'index.html'
-})
->>>>>>> 83d305b2e572f3c709856668b8e2e8774eb96c8e
